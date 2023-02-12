@@ -1,0 +1,35 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.gap2rem{
+    gap: 2rem;
+}
+
+.height100vh{
+    height: 100vh;
+}
+
+.input-box{
+padding: 1rem 2rem;
+border-radius: 0.6rem;
+border: none;
+width: 100%;
+}
+
+.btn{
+    padding: 0.6rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+
+.disabled{
+    opacity: 0.8;
+    cursor: not-allowed;
+}

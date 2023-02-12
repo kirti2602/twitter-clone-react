@@ -1,0 +1,37 @@
+@import "./reset.css";
+@import "./utils.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+
+:root{
+    --grey: rgba(91, 112, 131, 0.4);
+    --black: black;
+    --white: white;
+    --font-family: 'Poppins', sans-serif;
+}
+
+*{
+    font-family: var(--font-family);
+}
+
+.login{
+    background-color: var(--grey);
+    height: 100vh;
+}
+
+.login__form{
+    max-width: 100%;
+    background-color: black;
+    color: var(--white);
+    padding: 4rem 4rem 6rem 4rem;
+}
+
+.login__form__heading{
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.login__form__btn{
+background-color: var(--white);
+color: var(--black);
+}
