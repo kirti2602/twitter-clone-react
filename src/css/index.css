@@ -2,11 +2,14 @@
 @import "./utils.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
 
 :root{
     --grey: rgba(91, 112, 131, 0.4);
+    --shadow-grey: rgb(48, 47, 47);
     --black: black;
     --white: white;
+    --blue: #1DA1F2;
     --red: rgb(252, 27, 27);
     --font-family: 'Poppins', sans-serif;
 }
@@ -14,6 +17,8 @@
 *{
     font-family: var(--font-family);
 }
+
+/* login page CSS */
 
 .login{
     background-color: var(--grey);
@@ -38,4 +43,49 @@ color: var(--black);
 
 .login__form__message{
     color: var(--red);
+}
+/* ********************************************* */
+
+
+/* homescreen css  */
+.homescreen{
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 2rem;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
+/* leftpanel css */
+.left-panel{
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: scroll;
+    font-size: 1.5rem;
+    padding: 0rem 4rem 0 2rem;
+}
+
+.left-panel div{
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.left-panel div:hover{
+    background-color: var(--shadow-grey);
+    border-radius: 2rem;
+}
+
+.logo{
+    font-size: 2rem;
+}
+
+.route-link{
+    color: white;
+    text-decoration: none;
+}
+
+.tweet-btn{
+    background-color: var(--blue);
+    color: var(--white);
+    width: 100%;
 }

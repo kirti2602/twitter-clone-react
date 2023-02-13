@@ -1,8 +1,15 @@
 import React from "react";
+import LeftPanel from "../components/LeftPanel";
+import CenterPanel from "../components/CenterPanel";
+import RightPanel from "../components/RightPanel";
 
 const Homepage = () => {
     return(
-        <div>This is hompage</div>
+        <main className="homescreen grid height100vh">
+            <LeftPanel/>
+            <CenterPanel/>
+            <RightPanel />
+        </main>
     )
 }
 
