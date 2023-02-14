@@ -2,19 +2,27 @@ import React, { useEffect, useState } from "react";
 import LeftPanel from "../components/LeftPanel";
 import man from "../assets/man.png";
 import Shimmer from "../components/Shimmer"
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const [profile, setProfile] = useState({});
+  const navigate = useNavigate()
 
   useEffect(() => {
     getProfileData();
-  }, [profile]);
+  }, []);
 
   const getProfileData = async () => {
-    const data = await fetch("https://tweeter.free.beeceptor.com/profile");
-    // console.log(data)
-    const toJson = await data.json();
-    setProfile(toJson);
+    // 
+
+    try{
+      const data = await fetch("https://tweeter.free.beeceptor.com/profile");
+      const toJson = await data.json();
+      setProfile(toJson);
+    }
+    catch(error){
+      navigate("/error")
+    }
   };
 
   return (
