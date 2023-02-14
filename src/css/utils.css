@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .flex-col{
@@ -10,6 +11,10 @@
 
 .gap2rem{
     gap: 2rem;
+}
+
+.gap1rem{
+    gap: 1rem;
 }
 
 .height100vh{
@@ -38,3 +43,31 @@ width: 100%;
 .grid{
     display: grid;
 }
+
+.padding2rem{
+    padding: 2rem;
+}
+
+.max-width100{
+max-width: 100%;
+}
+
+.thin-hr{
+border: none;
+border-top: 1px solid var(--shadow-grey);
+height: 1px;
+margin: 2rem 0rem;
+}
+
+.background{
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.header{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+

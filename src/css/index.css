@@ -46,22 +46,12 @@ color: var(--black);
 }
 /* ********************************************* */
 
-
-/* homescreen css  */
-.homescreen{
-    grid-template-columns: 1fr 2fr 1fr;
-    padding: 2rem;
-    background-color: var(--black);
-    color: var(--white);
-}
-
-
 /* leftpanel css */
 .left-panel{
     align-items: flex-start;
     justify-content: flex-start;
     overflow: scroll;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 0rem 4rem 0 2rem;
 }
 
@@ -87,5 +77,69 @@ color: var(--black);
 .tweet-btn{
     background-color: var(--blue);
     color: var(--white);
+    width: 100%;
+}
+
+/* ------------------------------------------------ */
+.center-panel{
+    border-right: 1px solid var(--grey);
+}
+
+.center-panel__header{
+    justify-content: space-between;
+}
+
+.center-panel__tweet div{
+justify-content: flex-start;
+}
+
+
+.center-panel__tweet__avatar{
+    height: 3rem;
+}
+
+.center-panel__tweet__input{
+    background-color: transparent;
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    max-width: 100%;
+    font-size: 1.3rem;
+}
+
+.center-panel__tweet__input:focus{
+    outline: none;
+}
+
+/* ------------------------------------------------ */
+
+/* profile page css */
+.profile__body__avatar{
+    height: 6rem;
+}
+
+/* ------------------------- */
+
+/* shimmer UI */
+.shimmer div{
+    background-color: #757575;
+}
+
+.shimmer__avatar{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+}
+
+.shimmer__body{
+    height: 15rem;
+    width: 15rem;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.shimmer__body__items{
+    background-color: #9e9d9d !important;
+    height: 1.5rem;
     width: 100%;
 }

@@ -5,7 +5,7 @@ import RightPanel from "../components/RightPanel";
 
 const Homepage = () => {
     return(
-        <main className="homescreen grid height100vh">
+        <main className="background grid height100vh">
             <LeftPanel/>
             <CenterPanel/>
             <RightPanel />
