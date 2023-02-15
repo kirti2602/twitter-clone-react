@@ -1,15 +1,25 @@
 import React, { useState } from "react";
 import DeleteToast from "./DeleteToast";
 
-const RightPanel = ({allTweets, setAllTweets, tweetsList, setTweetsList , toast}) => {
+const RightPanel = ({
+  allTweets,
+  setAllTweets,
+  tweetsList,
+  setTweetsList,
+  toast,
+}) => {
   const [input, setInput] = useState("");
-
+  const [searchResult, setSearchResult] = useState([]);
+  
   const handleFilter = (searchedTweet) => {
-    // on search, the tweets are coming back even after getting deleted - BUG 
-    const filteredTweetList = allTweets.filter((item) =>
-      item.tweet.toLowerCase().includes(searchedTweet.toLowerCase())
-    );
-    setTweetsList(filteredTweetList);
+    if (searchedTweet === '') {
+      setSearchResult([]);
+    } else {
+      const filteredTweetList = allTweets.filter((item) =>
+        item.tweet.toLowerCase().includes(searchedTweet.toLowerCase())
+      );
+      setSearchResult(filteredTweetList);
+    }
   };
 
   return (
@@ -27,15 +37,23 @@ const RightPanel = ({allTweets, setAllTweets, tweetsList, setTweetsList , toast}
           type="text"
         />
       </div>
-      {tweetsList.length === 0 ? (
-        <span className="not-found-text">No tweets found!</span>
-      ) : (
-        <span></span>
-      )}
 
-      {
-        toast ? <DeleteToast /> : ""
-      }
+      <div className="rightpanel__seachresult">
+        {searchResult.length === 0 ? (
+          <span className="not-found-text">Tweet Not Found!</span>
+        ) : (
+          searchResult.map((item) => {
+            return (
+              <span>
+                {item.tweet}
+                <hr className="thin-hr" />
+              </span>
+            );
+          })
+        )}
+      </div>
+
+      {toast ? <DeleteToast /> : ""}
     </aside>
   );
 };
