@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./tweets/Header";
 import MakeTweet from "./tweets/MakeTweet";
 import ShowTweet from "./tweets/ShowTweet";
+import Spinner from "../assets/Spinner.svg"
 
 const CenterPanel = ({
   tweets,
@@ -20,7 +21,9 @@ const CenterPanel = ({
         tweetsList={tweetsList}
         setTweetsList={setTweetsList}
       />
-      {tweetsList.map((tweet) => {
+      {
+      tweetsList.length === 0 ?  <img className="loader" src={Spinner} alt="spinner" /> : 
+      tweetsList.map((tweet) => {
         return (
           <>
             <ShowTweet

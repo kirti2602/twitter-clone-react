@@ -15,12 +15,13 @@ const Homepage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    getTweets();
+    // artificial delay
+    setTimeout(() => getTweets(), 500)
   }, []);
 
   const getTweets = async () => {
     try {
-      const data = await fetch("https://tweets.free.beeceptor.com/tweets/all");
+      const data = await fetch("https://twitter-proj.free.beeceptor.com/tweets");
       const toJson = await data.json();
       setTweetsList(toJson);
       setTweets(toJson);

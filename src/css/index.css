@@ -109,6 +109,11 @@
     font-size: 1.3rem;
 }
 
+/* tweet loading css */
+.loader{
+    margin-left: 30%;
+}
+
 /* make tweet section */
 .showtweet {
     align-items: flex-start;
