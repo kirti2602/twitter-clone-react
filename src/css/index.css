@@ -200,6 +200,7 @@
     background-color: var(--grey);
     padding: 1rem;
     justify-content: flex-start;
+    margin-bottom: 2rem;
     color: var(--medium-grey);
 }
 
@@ -212,4 +213,10 @@
 
 .rightpanel__searchbar:active{
     border-color: var(--blue);
+}
+
+/* --------------------------------- */
+
+.not-found-text{
+    font-size: 1.2rem;
 }
