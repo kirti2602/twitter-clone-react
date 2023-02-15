@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DeleteToast from "./DeleteToast";
 
-const RightPanel = ({ allTweets, tweetsList, setTweetsList , toast}) => {
+const RightPanel = ({allTweets, setAllTweets, tweetsList, setTweetsList , toast}) => {
   const [input, setInput] = useState("");
 
   const handleFilter = (searchedTweet) => {

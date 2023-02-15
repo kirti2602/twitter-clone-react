@@ -34,7 +34,8 @@ const Homepage = () => {
       <LeftPanel/>
 
       <CenterPanel
-        allTweets={tweets}
+        tweets = {tweets}
+        setTweets={setTweets}
         tweetsList={tweetsList}
         setTweetsList={setTweetsList}
         showToast={showToast}
@@ -42,6 +43,7 @@ const Homepage = () => {
 
       <RightPanel
         allTweets={tweets}
+        setAllTweets = {setTweets}
         tweetsList={tweetsList}
         setTweetsList={setTweetsList}
         toast={toast}

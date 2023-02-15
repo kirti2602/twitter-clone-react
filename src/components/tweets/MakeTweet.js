@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import avatar from "../../assets/girl.png";
 
-const MakeTweet = ({ tweetsList, setTweetsList }) => {
+const MakeTweet = ({tweets, setTweets, tweetsList, setTweetsList }) => {
   const [input, setInput] = useState();
   /* 
   BUG-- Tweets created have same username, hence all of them are getting deleted
@@ -9,7 +9,7 @@ const MakeTweet = ({ tweetsList, setTweetsList }) => {
   */
 
   const handleAddTweet = () => {
-    setTweetsList([
+    const updatedList = [
       {
         userName: "keerti",
         date: "1s",
@@ -19,7 +19,9 @@ const MakeTweet = ({ tweetsList, setTweetsList }) => {
         firstName: "kirti",
       },
       ...tweetsList,
-    ]);
+    ]
+    setTweetsList(updatedList);
+    setTweets(updatedList)
   };
 
   return (
