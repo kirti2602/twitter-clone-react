@@ -5,7 +5,7 @@ const Header = () => {
       <span>Home</span>
       <span>Profile</span>
       <span>
-        <i class="fa-solid fa-right-from-bracket"></i>
+        <i className="fa-solid fa-right-from-bracket"></i>
       </span>
     </div>
   );

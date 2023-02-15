@@ -52,18 +52,18 @@ const ShowTweet = ({tweets,setTweets, tweetContent, tweetsList, setTweetsList, s
         </div>
         <div className="showtweet__more flex max-width100">
           <span className="showtweet__more__likes">
-            <i class="fa-regular fa-heart"></i> {numberOfLikes}
+            <i className="fa-regular fa-heart"></i> {numberOfLikes}
           </span>
           <span className="showtweet__more__comments">
-            <i class="fa-regular fa-comment"></i> {numberOfComments}
+            <i className="fa-regular fa-comment"></i> {numberOfComments}
           </span>
           <span onClick = {() => setIsEditing(true)} className="showtweet__more__edit">
             {
-              isEditing ? "" : <i class="fa-regular fa-pen-to-square"></i>
+              isEditing ? "" : <i className="fa-regular fa-pen-to-square"></i>
             }
           </span>
           <span onClick = {()=> handleDeleteTweet(tweet)} className="showtweet__more__delete">
-            <i class="fa-solid fa-trash"></i>
+            <i className="fa-solid fa-trash"></i>
           </span>
         </div>
       </div>
