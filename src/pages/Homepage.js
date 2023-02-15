@@ -2,7 +2,6 @@ import React from "react";
 import LeftPanel from "../components/LeftPanel";
 import CenterPanel from "../components/CenterPanel";
 import RightPanel from "../components/RightPanel";
-// import tweets from "../data/tweets.js";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -31,7 +30,7 @@ const Homepage = () => {
   };
 
   return (
-    <main className="background grid height200vh">
+    <main className="homepage background grid height200vh">
       <LeftPanel/>
 
       <CenterPanel
@@ -44,9 +43,6 @@ const Homepage = () => {
 
       <RightPanel
         allTweets={tweets}
-        setAllTweets = {setTweets}
-        tweetsList={tweetsList}
-        setTweetsList={setTweetsList}
         toast={toast}
       />
     </main>

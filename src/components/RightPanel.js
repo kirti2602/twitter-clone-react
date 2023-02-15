@@ -3,14 +3,11 @@ import DeleteToast from "./DeleteToast";
 
 const RightPanel = ({
   allTweets,
-  setAllTweets,
-  tweetsList,
-  setTweetsList,
   toast,
 }) => {
   const [input, setInput] = useState("");
   const [searchResult, setSearchResult] = useState([]);
-  
+
   const handleFilter = (searchedTweet) => {
     if (searchedTweet === '') {
       setSearchResult([]);

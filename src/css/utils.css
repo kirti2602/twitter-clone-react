@@ -50,6 +50,7 @@ width: 100%;
 
 .grid{
     display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
 .padding2rem{
@@ -68,7 +69,6 @@ margin: 2rem 0rem;
 }
 
 .background{
-    grid-template-columns: 1fr 2fr 1fr;
     background-color: var(--black);
     color: var(--white);
 }

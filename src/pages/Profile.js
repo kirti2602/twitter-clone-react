@@ -44,13 +44,13 @@ const Profile = () => {
                 {profile?.first_name} {profile?.last_name}
               </span>
               <span>
-                <i className="fa-solid fa-envelope"></i> {profile?.email}
+                <i class="fa-solid fa-envelope"></i> {profile?.email}
               </span>
               <span>
-                <i className="fa-solid fa-venus-mars"></i> {profile?.gender}
+                <i class="fa-solid fa-venus-mars"></i> {profile?.gender}
               </span>
               <span>
-                <i className="fa-solid fa-location-dot"></i> {profile?.country}
+                <i class="fa-solid fa-location-dot"></i> {profile?.country}
               </span>
             </>
           )}
