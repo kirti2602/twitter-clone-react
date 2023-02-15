@@ -8,7 +8,7 @@ const CenterPanel = ({ allTweets, tweetsList, setTweetsList, showToast}) => {
     <main className="center-panel padding2rem">
       <Header />
       <hr className="thin-hr" />
-      <MakeTweet />
+      <MakeTweet tweetsList={tweetsList} setTweetsList = {setTweetsList} />
       {tweetsList.map((tweet) => {
         return (
           <>

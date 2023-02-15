@@ -11,7 +11,7 @@ const Homepage = () => {
   const [tweets, setTweets] = useState();
 
   // for toast message
-  const [toast, showToast] = useState(false)
+  const [toast, showToast] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,9 +21,7 @@ const Homepage = () => {
   const getTweets = async () => {
     try {
       const data = await fetch("https://tweets.free.beeceptor.com/tweets/all");
-      console.log(data);
       const toJson = await data.json();
-      console.log(toJson);
       setTweetsList(toJson);
       setTweets(toJson);
     } catch (error) {
@@ -33,20 +31,20 @@ const Homepage = () => {
 
   return (
     <main className="background grid height200vh">
-      <LeftPanel />
+      <LeftPanel/>
 
       <CenterPanel
         allTweets={tweets}
         tweetsList={tweetsList}
         setTweetsList={setTweetsList}
-        showToast = {showToast}
+        showToast={showToast}
       />
 
       <RightPanel
         allTweets={tweets}
         tweetsList={tweetsList}
         setTweetsList={setTweetsList}
-        toast = {toast}
+        toast={toast}
       />
     </main>
   );
