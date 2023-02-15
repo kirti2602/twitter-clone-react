@@ -17,12 +17,17 @@
     gap: 1rem;
 }
 
+
 .height100vh{
     height: 100vh;
 }
 
+.height200vh{
+    height: 200vh;
+}
+
 .input-box{
-padding: 1rem 2rem;
+padding: 1rem 1rem;
 border-radius: 0.6rem;
 border: none;
 width: 100%;
@@ -31,7 +36,7 @@ width: 100%;
 .btn{
     padding: 0.6rem 2rem;
     border-radius: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
@@ -49,7 +54,7 @@ width: 100%;
 }
 
 .max-width100{
-max-width: 100%;
+min-width: 100%;
 }
 
 .thin-hr{
@@ -68,6 +73,10 @@ margin: 2rem 0rem;
 .header{
     font-weight: 600;
     font-size: 1.3rem;
+}
+
+input:focus{
+    outline: none;
 }
 
 

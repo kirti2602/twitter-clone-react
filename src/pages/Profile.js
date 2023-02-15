@@ -13,8 +13,6 @@ const Profile = () => {
   }, []);
 
   const getProfileData = async () => {
-    // 
-
     try{
       const data = await fetch("https://tweeter.free.beeceptor.com/profile");
       const toJson = await data.json();
@@ -32,6 +30,7 @@ const Profile = () => {
         <div className="profile__header header">Profile</div>
         <hr className="thin-hr" />
         <div className="profile__body flex flex-col gap2rem">
+          {/* Until data is coming from API, show a shimmer */}
           {Object.keys(profile).length === 0 ? (
             <Shimmer />
           ) : (
