@@ -22,6 +22,7 @@ const MakeTweet = ({tweets, setTweets, tweetsList, setTweetsList }) => {
     ]
     setTweetsList(updatedList);
     setTweets(updatedList)
+    setInput("")
   };
 
   return (
