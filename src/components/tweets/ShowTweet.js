@@ -1,7 +1,16 @@
 import React from "react"
 
-const ShowTweet = ({tweetContent}) => {
+const ShowTweet = ({tweetContent, tweetsList, setTweetsList, showToast}) => {
     const {firstName, userName, date, tweet, numberOfLikes, numberOfComments } = tweetContent;
+
+    const handleDeleteTweet = (userName) => {
+      const updatedList = tweetsList.filter(tweet => tweet.userName !== userName)
+      setTweetsList(updatedList)
+      showToast(true)
+      setTimeout(() => showToast(false), 1000)
+    }
+
+
     return (
       <div className="showtweet flex flex-col gap1rem max-width100">
         <div className="showtweet__header flex gap1rem">
@@ -22,7 +31,7 @@ const ShowTweet = ({tweetContent}) => {
           <span className="showtweet__more__edit">
             <i class="fa-regular fa-pen-to-square"></i>
           </span>
-          <span className="showtweet__more__delete">
+          <span onClick = {()=> handleDeleteTweet(userName)} className="showtweet__more__delete">
             <i class="fa-solid fa-trash"></i>
           </span>
         </div>

@@ -14,7 +14,7 @@ const Profile = () => {
 
   const getProfileData = async () => {
     try{
-      const data = await fetch("https://tweeter.free.beeceptor.com/profile");
+      const data = await fetch("https://tweets.free.beeceptor.com/profile");
       const toJson = await data.json();
       setProfile(toJson);
     }

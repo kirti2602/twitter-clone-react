@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import DeleteToast from "./DeleteToast";
 
-const RightPanel = ({ allTweets, tweetsList, setTweetsList }) => {
+const RightPanel = ({ allTweets, tweetsList, setTweetsList , toast}) => {
   const [input, setInput] = useState("");
 
   const handleFilter = (searchedTweet) => {
+    // on search, the tweets are coming back even after getting deleted - BUG 
     const filteredTweetList = allTweets.filter((item) =>
       item.tweet.toLowerCase().includes(searchedTweet.toLowerCase())
     );
@@ -30,6 +32,10 @@ const RightPanel = ({ allTweets, tweetsList, setTweetsList }) => {
       ) : (
         <span></span>
       )}
+
+      {
+        toast ? <DeleteToast /> : ""
+      }
     </aside>
   );
 };

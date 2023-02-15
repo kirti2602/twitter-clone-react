@@ -138,10 +138,16 @@
     cursor: pointer;
 }
 
+.showtweet__more__delete:hover{
+color: var(--blue);
+}
+
+.showtweet__more__edit:hover{
+    color: var(--blue);
+}
 
 
 /* ------------------------------------------------ */
-
 /* profile page css */
 .profile__body__avatar {
     height: 6rem;
@@ -192,9 +198,11 @@
 
 /* ------------------------------------ */
 /* right panel */
-/* .rightpanel{
 
-} */
+.right-panel{
+    position: relative;
+}
+
 .rightpanel__searchbar{
     border-radius: 2rem;
     background-color: var(--grey);
@@ -211,12 +219,39 @@
     font-size: 1rem;
 }
 
-.rightpanel__searchbar:active{
-    border-color: var(--blue);
-}
-
 /* --------------------------------- */
 
 .not-found-text{
     font-size: 1.2rem;
 }
+
+/* ------------------------------------ */
+/* deleted toast */
+.delete-toast{
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    width: 12rem;
+    justify-content: flex-start;
+    border-radius: 0.3rem;
+    bottom: 1rem;
+    right: 1rem;
+
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0.5;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0.5;}
+    to {bottom: 30px; opacity: 1;}
+  }
